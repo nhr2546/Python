@@ -13,5 +13,7 @@ class BaseTest(unittest.TestCase):
     def test_setUp(self):
         self.param.w.get(self.param.rootUrl)
         self.param.w.maximize_window()
+        assert self.welcomepage.check_page()
+
 
 
