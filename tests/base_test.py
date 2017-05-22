@@ -14,6 +14,9 @@ class BaseTest(unittest.TestCase):
         self.param.w.get(self.param.rootUrl)
         self.param.w.maximize_window()
         assert self.welcomepage.check_page()
+    @classmethod
+    def tearDownClass(cls):
+        cls.param.w.quit()
 
 
 
