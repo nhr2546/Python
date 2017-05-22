@@ -10,7 +10,7 @@ class BaseTest(unittest.TestCase):
     loginpage = LoginPage(param.w, param.rootUrl)
     mainpage = MainPage(param.w, param.rootUrl)
     framepage = FramePage(param.w, param.rootUrl)
-    def test_setUp(self):
+    def setUp(self):
         self.param.w.get(self.param.rootUrl)
         self.param.w.maximize_window()
         assert self.welcomepage.check_page()
