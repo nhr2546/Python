@@ -3,6 +3,6 @@ class MainPage(PageObject):
     logout_link = PageElement(link_text="Logout")
     def check_page(self):
         return "Logged" in self.w.title
-    def click_logout():
+    def click_logout(self, mainpage):
         self.logout_link.click()
-        return loginpage.check_page()
+        return "Welcome" in self.w.title
